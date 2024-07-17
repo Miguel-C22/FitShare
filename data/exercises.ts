@@ -1,0 +1,91 @@
+import { ExerciseOptions } from "@/schema/exerciseOptions";
+
+export const exercises: ExerciseOptions = {
+    chest: [
+        "Bench Press",
+        "Push Up",
+        "Dumbbell Fly",
+        "Incline Bench Press",
+        "Decline Bench Press",
+        "Chest Dip",
+        "Chest Press",
+    ],
+    arms: [
+        "Bicep Curl",
+        "Tricep Dips",
+        "Hammer Curls",
+        "Skull Crusher",
+        "Preacher Curl",
+        "Tricep Extension",
+        "Close Grip Bench Press",
+        "Barbell Curl",
+        "Concentration Curl"
+    ],
+    back: [
+        "Deadlift",
+        "Pull Up",
+        "Bent Over Row",
+        "Lat Pulldown",
+        "T-Bar Row",
+        "Seated Row",
+        "Hyperextension",
+        "Good Morning",
+    ],
+    legs: [
+        "Squat",
+        "Lunge",
+        "Leg Press",
+        "Stiff Leg Deadlift",
+        "Calf Raise",
+        "Leg Curl",
+        "Leg Extension",
+        "Hack Squat",
+    ],
+    shoulders: [
+        "Overhead Press",
+        "Lateral Raise",
+        "Front Raise",
+        "Upright Row",
+        "Shrug",
+        "Arnold Press",
+        "Reverse Fly",
+        "Military Press",
+        "Shoulder Press"
+    ],
+    abs: [
+        "Crunches",
+        "Plank",
+        "Leg Raise",
+        "Russian Twist",
+        "Mountain Climber",
+        "Bicycle Crunch",
+        "Hanging Leg Raise",
+        "Flutter Kick",
+        "Sit-Up",
+    ],
+    glutes: [
+        "Hip Thrust",
+        "Gluts Bridge",
+        "Squat",
+        "Lunge",
+        "Step-Up",
+        "Sumo Squat",
+        "Good Morning"
+    ],
+    calves: [
+        "Calf Raise",
+        "Seated Calf Raise",
+        "Standing Calf Raise",
+        "Donkey Calf Raise",
+        "Jump Rope",
+        "Box Jump",
+    ],
+    forearms: [
+        "Wrist Curl",
+        "Reverse Wrist Curl",
+        "Hammer Curl",
+        "Farmers Walk",
+        "Wrist Roller",
+    ],
+
+}
