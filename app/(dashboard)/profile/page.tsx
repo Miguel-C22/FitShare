@@ -1,6 +1,8 @@
-type Props = {}
+import saveNewUser from "@/config/saveNewUser"
 
-function Profile({}: Props) {
+function Profile() {
+  saveNewUser()
+  
   return (
     <div>page</div>
   )

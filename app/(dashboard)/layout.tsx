@@ -1,8 +1,10 @@
 import { PropsWithChildren } from 'react';
 import Link from 'next/link';
 import { UserButton} from '@clerk/nextjs'
+import {currentUser} from "@clerk/nextjs/server";
 
-function layout({ children }: PropsWithChildren) {
+async function layout({ children }: PropsWithChildren) {
+
   return (
     <div>
        <div className='max-w-screen-lg m-auto'>
