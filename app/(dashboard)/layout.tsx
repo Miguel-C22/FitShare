@@ -23,7 +23,7 @@ async function layout({ children }: PropsWithChildren) {
                     <li><Link href="/accountSettings">Settings</Link></li>
                 </ul>
                 </div>
-                <a className="btn btn-ghost text-xl">Workout App</a>
+                <a className="btn btn-ghost text-xl">FitShare</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
