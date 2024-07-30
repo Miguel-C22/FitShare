@@ -17,7 +17,7 @@ async function layout({ children }: PropsWithChildren) {
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
                     <li><Link href="/profile">Profile</Link></li>
                     <li><Link href="/liveFeed">Feed</Link></li>
-                    <li><Link href="/apiTrainer">Trainer</Link></li>
+                    <li><Link href="/aiTrainer">Trainer</Link></li>
                     <li><Link href="/exercises">Exercises</Link></li>
                     <li><Link href="/explore">Explore</Link></li>
                     <li><Link href="/accountSettings">Settings</Link></li>
@@ -29,7 +29,7 @@ async function layout({ children }: PropsWithChildren) {
                 <ul className="menu menu-horizontal px-1">
                 <li><Link href="/profile">Profile</Link></li>
                     <li><Link href="/liveFeed">Feed</Link></li>
-                    <li><Link href="/apiTrainer">Trainer</Link></li>
+                    <li><Link href="/aiTrainer">Trainer</Link></li>
                     <li><Link href="/exercises">Exercises</Link></li>
                     <li><Link href="/explore">Explore</Link></li>
                     <li><Link href="/accountSettings">Settings</Link></li>
