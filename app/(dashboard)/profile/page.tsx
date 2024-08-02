@@ -1,9 +1,11 @@
 "use client"
-import Post from '@/components/profilePage/Post';
+import Public  from '@/components/profilePage/Public';
 import Private from '@/components/profilePage/Private';
 import Saved from '@/components/profilePage/Saved';
 import CreateWorkout from '@/components/CreateWorkout/CreateWorkout';
+import fetchUsersPosts from '@/hooks/fetchUsersPosts';
 import {useState, useEffect} from 'react'
+
 
 function Profile(){
   const [selectedComponent, setSelectedComponent] = useState<string>('public');
@@ -12,6 +14,10 @@ function Profile(){
 
   useEffect(() => {
   }, []);
+
+  async function getUsersWorkoutPosts(){
+    
+  }
 
   const handleWorkoutSubmission = async () => {
       setLoading(true);
@@ -26,7 +32,7 @@ function Profile(){
   function renderComponent() {
       switch (selectedComponent) {
           case 'public':
-              return <Post   /> //publicData={publicData} loading={loading}
+              return <Public /> //publicData={publicData} loading={loading}
           case 'private':
               return  <Private />
           case 'saved':
@@ -42,7 +48,7 @@ function Profile(){
           <div className="flex justify-center gap-4 mt-24">
               <button 
               onClick={() => handleComponentSelection('public')}>
-              Posts
+              Public
               </button>
               <span>|</span>
               <button 

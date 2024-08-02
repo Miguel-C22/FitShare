@@ -3,7 +3,7 @@ import useAlert from '../../hooks/alert'
 import useLoader from '../../hooks/loader'
 import { useUser } from '@clerk/clerk-react';
 import {Exercise} from '../../schema/createWorkout'
-import { postNewWorkout } from '@/config/postNewWorkout';
+import { postNewWorkout } from '@/utils/postNewWorkout';
 
 function CreateWorkout() {
     //Clerk

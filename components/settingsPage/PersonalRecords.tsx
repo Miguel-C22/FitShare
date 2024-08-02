@@ -1,6 +1,6 @@
 import {useState}from 'react'
 import { UserInfo } from '@/schema/userInfo'
-import updateUsersData from '@/config/updateUserData';
+import updateUsersData from '@/hooks/updateUserData';
 
 interface PersonalRecordsProps extends UserInfo {}
 

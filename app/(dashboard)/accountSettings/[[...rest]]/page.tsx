@@ -5,7 +5,7 @@ import { BsGraphUp } from "react-icons/bs";
 import { TiBusinessCard } from "react-icons/ti";
 import { PiSignOutBold } from "react-icons/pi";
 import { useClerk, useUser } from '@clerk/nextjs';
-import useFetchUserData from "@/config/fetchUserData";
+import useFetchUserData from "@/hooks/fetchUserData";
 import Profile from "@/components/settingsPage/Profile";
 import Bio from "@/components/settingsPage/Bio"
 import PersonalRecords from "@/components/settingsPage/PersonalRecords";
@@ -28,7 +28,6 @@ function accountSettingsPage() {
   function handleComponentSelection(component: string) {
     setSelectedComponent(component);
     if (user) {
-      console.log(userData)
         fetchUserData(user.id);
     }else{
       throw new Error("Current Users Id was not able to be fetched")

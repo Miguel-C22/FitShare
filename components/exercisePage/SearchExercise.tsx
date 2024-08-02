@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {getSpecificExercises} from '../../config/exerciseApi'
+import {getSpecificExercises} from '../../utils/exerciseApi'
 import DisplayExercises from './DisplayExercises'
 import useLoader from '../../hooks/loader'
 import { Exercise } from "../../schema/exerciseApiData"

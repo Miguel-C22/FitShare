@@ -1,9 +1,9 @@
 import React, { Children } from 'react';
 import UserName from "@/components/profilePage/UserName"
 import ProfileImage from "@/components/profilePage/ProfileImage"
-import saveNewUser from "@/config/saveNewUser"
-import { fetchClerkUser } from "@/config/fetchClerkUser";
-import { serverSideFetchUserData } from "@/config/serverSideFetchUserData"
+import saveNewUser from "@/utils/saveNewUser"
+import { fetchClerkUser } from "@/utils/fetchClerkUser";
+import { serverSideFetchUserData } from "@/utils/serverSideFetchUserData"
 import PersonalRecords from '@/components/profilePage/PersonalRecords';
 import Bio from '@/components/profilePage/Bio';
 import { PropsWithChildren } from 'react';

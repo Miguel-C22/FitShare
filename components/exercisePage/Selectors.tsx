@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react'
 import {exercises} from '../../data/exercises'
 import { ExerciseOptions } from '../../schema/exerciseOptions'
-import {getSpecificExercises} from '../../config/exerciseApi'
+import {getSpecificExercises} from '../../utils/exerciseApi'
 import DisplayExercises from './DisplayExercises'
 import useLoader from '../../hooks/loader'
 import { Exercise } from '@/schema/exerciseApiData'

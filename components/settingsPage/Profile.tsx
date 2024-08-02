@@ -2,7 +2,7 @@ import {useEffect, useState}from 'react'
 import { UserProfile } from '@clerk/nextjs'
 import { useUser } from '@clerk/nextjs'
 import { UserInfo } from '@/schema/userInfo'
-import updateUsersData from '@/config/updateUserData'
+import updateUsersData from '@/hooks/updateUserData'
 
 interface ProfileProps extends UserInfo {}
 
