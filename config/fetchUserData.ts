@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useUser } from '@clerk/clerk-react';
 import { UserInfo } from '@/schema/userInfo';
 
-function useFetchUserData() {
+function fetchUserData() {
     const [userData, setUserData] = useState<UserInfo | null>(null);
     const { user } = useUser();
 
@@ -31,4 +31,4 @@ function useFetchUserData() {
     return { userData, fetchUserData };
 }
 
-export default useFetchUserData;
+export default fetchUserData;

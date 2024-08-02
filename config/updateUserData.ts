@@ -1,7 +1,7 @@
 import { UserInfo } from '@/schema/userInfo';
 import { useUser } from '@clerk/clerk-react';
 
-function useUpdateUserData() {
+function updateUserData() {
     const { user } = useUser();
 
     async function updateUserData(data: Partial<UserInfo>) {
@@ -28,4 +28,4 @@ function useUpdateUserData() {
     return { updateUserData };
 }
 
-export default useUpdateUserData
+export default updateUserData

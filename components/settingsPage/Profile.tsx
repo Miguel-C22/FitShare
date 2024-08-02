@@ -2,7 +2,7 @@ import {useEffect, useState}from 'react'
 import { UserProfile } from '@clerk/nextjs'
 import { useUser } from '@clerk/nextjs'
 import { UserInfo } from '@/schema/userInfo'
-import useUpdateUserData from '@/config/updateUserData'
+import updateUsersData from '@/config/updateUserData'
 
 interface ProfileProps extends UserInfo {}
 
@@ -18,7 +18,7 @@ function Profile({ userId, userName, email, profilePicture }: ProfileProps) {
   const { user } = useUser();
   
   //config
-  const { updateUserData } = useUpdateUserData()
+  const { updateUserData } = updateUsersData()
 
 
   useEffect(() => {

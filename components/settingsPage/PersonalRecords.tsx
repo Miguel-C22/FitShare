@@ -1,12 +1,14 @@
 import {useState}from 'react'
 import { UserInfo } from '@/schema/userInfo'
-import useUpdateUserData from '@/config/updateUserData';
+import updateUsersData from '@/config/updateUserData';
 
 interface PersonalRecordsProps extends UserInfo {}
 
 function PersonalRecords({ userId, prBench, prDeadLift, prSquat }: PersonalRecordsProps) {
-  const { updateUserData } = useUpdateUserData()
+  //config
+  const { updateUserData } = updateUsersData()
 
+  //state
   const [bench, setBench] = useState<number | undefined>(prBench);
   const [squat, setSquat] = useState<number | undefined>(prSquat);
   const [deadLift, setDeadLift] = useState<number | undefined>(prDeadLift);

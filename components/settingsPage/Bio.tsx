@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { UserInfo } from '@/schema/userInfo'
-import useUpdateUserData from '@/config/updateUserData';
+import updateUsersData from '@/config/updateUserData';
 
 interface BioProp extends UserInfo {}
 
@@ -9,7 +9,7 @@ function Bio({ userId, bio }: BioProp) {
   const [newBio, setNewBio] = useState<string>(bio || '')
 
   //config
-  const {updateUserData} = useUpdateUserData()
+  const {updateUserData} = updateUsersData()
 
   function clearBio () {
     setNewBio("")
