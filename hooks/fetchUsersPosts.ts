@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { Workout } from "@/schema/CreateWorkout"
 import { useUser } from '@clerk/clerk-react';
 
-function fetchUsersPosts(){
+function useFetchUsersPosts(){
     const { user } = useUser();
 
     const [publicPostsData, setPublicPostsData] = useState<Workout[]>([])
@@ -10,13 +10,14 @@ function fetchUsersPosts(){
 
     useEffect(() => {
         if(user){
-            fetchPosts(user.id);
+            fetchPosts();
         }
     },[user])
 
-    async function fetchPosts(userId: string){
+    async function fetchPosts(){
+        if (!user) return
         try {
-            const response = await fetch(`http://localhost:3000/api/createWorkout/${userId}`, {
+            const response = await fetch(`http://localhost:3000/api/createWorkout/${user.id}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',
@@ -30,7 +31,7 @@ function fetchUsersPosts(){
                   
             const publicPosts = data.allWorkouts.filter((post: Workout) => post.postType === 'public');
             const privatePosts = data.allWorkouts.filter((post: Workout) => post.postType === 'private');
-      
+
             setPublicPostsData(publicPosts);
             setPrivatePostsData(privatePosts);
         } catch (error) {
@@ -38,7 +39,7 @@ function fetchUsersPosts(){
         }
     }
 
-    return {  fetchPosts, publicPostsData, privatePostsData }
+    return { fetchPosts, publicPostsData, privatePostsData }
 }
 
-export default fetchUsersPosts
+export default useFetchUsersPosts

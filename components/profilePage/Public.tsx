@@ -1,25 +1,20 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import useLoader from '@/hooks/loader';
+import {Workout} from '@/schema/createWorkout'
+import useFetchUsersPosts from '@/hooks/fetchUsersPosts';
 
-function Public() {
-      //Call function to fetch data to display all Posts posts
-      // const {  fetchPosts, publicData } = useFetchUsersPosts()
-      const {loading, setLoading, Loader} = useLoader()
-      
-  //     useEffect(() => {
-  //      if (publicData.length < 0) {
-  //          fetchPosts()
-  //          setLoading(true);
-  //      } else {
-  //          setLoading(false);
-  //      }
-  //  }, [publicData]);
+type PublicPostsDataProps = {
+  publicPostsData: Workout[]
+}
+// { publicPostsData }: PublicPostsDataProps
+function Public({ publicPostsData}: PublicPostsDataProps) {
+  const { loading, setLoading, Loader } = useLoader();
  
    return (
      <div className='my-12'>
-       {/* {loading ? <div>{Loader()}</div> : 
+       {loading ? <div>{Loader()}</div> : 
          <div className='flex gap-8 flex-wrap justify-center mx-12'>
-           {publicData.map(data => {
+          {publicPostsData.length === 0 ? <p>You have No Posts</p> : <>{publicPostsData.map(data => {
              return (
                <React.Fragment key={data._id}>
                  <div className='w-full md:w-96 flex-shrink-0 border-solid border-2 p-4 border-stone-300 rounded-lg'>
@@ -53,9 +48,10 @@ function Public() {
                  </div>
                </React.Fragment>
              )
-           })}
+           })}</> }
+          
          </div>
-       } */}
+       }
      </div>
    )
 }

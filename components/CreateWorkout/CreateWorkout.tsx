@@ -5,7 +5,11 @@ import { useUser } from '@clerk/clerk-react';
 import {Exercise} from '../../schema/createWorkout'
 import { postNewWorkout } from '@/utils/postNewWorkout';
 
-function CreateWorkout() {
+type OnWorkoutSubmitProp = {
+    onWorkoutSubmit: () => void
+}
+
+function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
     //Clerk
     const { user } = useUser();
 
@@ -64,6 +68,7 @@ function CreateWorkout() {
         if (response) {
             resetForm();
             showAlertSuccess()
+            onWorkoutSubmit()
             setLoading(false);
             console.log("Workout Posted");
             }
