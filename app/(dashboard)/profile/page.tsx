@@ -4,6 +4,7 @@ import Private from '@/components/profilePage/Private';
 import Saved from '@/components/profilePage/Saved';
 import CreateWorkout from '@/components/CreateWorkout/CreateWorkout';
 import useFetchUsersPosts from '@/hooks/fetchUsersPosts';
+import useDeleteUsersWorkoutPost from '@/hooks/deleteUsersWorkoutPost';
 import {useState, useEffect} from 'react'
 
 
@@ -14,6 +15,7 @@ function Profile(){
 
   //hooks
   const { fetchPosts, publicPostsData, privatePostsData } = useFetchUsersPosts()
+  const { deleteWorkoutPost } = useDeleteUsersWorkoutPost()
 
   useEffect(() => {
     fetchPosts()
@@ -21,6 +23,11 @@ function Profile(){
 
   async function handleWorkoutSubmission() {
       await fetchPosts()
+  };
+
+  const handleDelete = async (workoutId: string) => {
+    await deleteWorkoutPost(workoutId);
+    await fetchPosts();
   };
 
   function handleComponentSelection(component: string) {
@@ -31,7 +38,7 @@ function Profile(){
   function renderComponent() {
       switch (selectedComponent) {
           case 'public':
-              return <Public publicPostsData={ publicPostsData}/> //publicPostsData={ publicPostsData} loading={loading}
+              return <Public publicPostsData={ publicPostsData} handleDelete={handleDelete}/> 
           case 'private':
               return  <Private />
           case 'saved':

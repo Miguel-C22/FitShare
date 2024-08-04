@@ -17,7 +17,7 @@ function useFetchUsersPosts(){
     async function fetchPosts(){
         if (!user) return
         try {
-            const response = await fetch(`http://localhost:3000/api/createWorkout/${user.id}`, {
+            const response = await fetch(`http://localhost:3000/api/workout/fetchUsersPosts/${user.id}`, {
                 method: "GET",
                 headers: {
                     'Content-Type': 'application/json',

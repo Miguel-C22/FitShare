@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import useLoader from '@/hooks/loader';
 import {Workout} from '@/schema/createWorkout'
-import useFetchUsersPosts from '@/hooks/fetchUsersPosts';
-
+import { FaRegTrashCan } from "react-icons/fa6";
 type PublicPostsDataProps = {
-  publicPostsData: Workout[]
+  publicPostsData: Workout[],
+  handleDelete: (workoutId: string) => void
 }
-// { publicPostsData }: PublicPostsDataProps
-function Public({ publicPostsData}: PublicPostsDataProps) {
-  const { loading, setLoading, Loader } = useLoader();
- 
+function Public({ publicPostsData, handleDelete}: PublicPostsDataProps) {
+  
    return (
-     <div className='my-12'>
-       {loading ? <div>{Loader()}</div> : 
+     <div className='my-12'> 
          <div className='flex gap-8 flex-wrap justify-center mx-12'>
-          {publicPostsData.length === 0 ? <p>You have No Posts</p> : <>{publicPostsData.map(data => {
+          {publicPostsData.length === 0 ? <p>You have No Posts</p> :
+          <>
+            {publicPostsData.map(data => {
              return (
                <React.Fragment key={data._id}>
+                <div className='flex flex-col gap-2'>
                  <div className='w-full md:w-96 flex-shrink-0 border-solid border-2 p-4 border-stone-300 rounded-lg'>
                    <div className="overflow-x-auto">
                      <table className="table min-w-full md:min-w-0">
@@ -46,12 +46,16 @@ function Public({ publicPostsData}: PublicPostsDataProps) {
                      {data.description}
                    </p>
                  </div>
+                 <button className='flex justify-end' onClick={() => handleDelete(data._id || "")}>
+                    <FaRegTrashCan/>
+                  </button>
+                </div>
                </React.Fragment>
              )
-           })}</> }
-          
-         </div>
-       }
+           })}
+          </>
+          }
+        </div>
      </div>
    )
 }

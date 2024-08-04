@@ -11,7 +11,7 @@ type PostData = {
 
 export async function postNewWorkout(data: PostData){
     try {
-        const response = await fetch("http://localhost:3000/api/createWorkout", {
+        const response = await fetch("http://localhost:3000/api/workout/postWorkout", {
             method: "POST",
             headers: {
               'Content-Type': 'application/json',

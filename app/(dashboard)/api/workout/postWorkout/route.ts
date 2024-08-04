@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server"
-import connectMongoDB from "../../../../db/connectDB";
+import connectMongoDB from "../../../../../db/connectDB";
 import NewWorkout from "@/db/schema/createWorkout";
 
 export async function POST(request: Request){
