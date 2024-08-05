@@ -102,7 +102,7 @@ function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
     }
   
     return (
-      <div className='fixed bottom-5 right-5'>
+      <div className='fixed bottom-5 right-5 z-10'>
       <button className="btn btn-active" onClick={openAddWorkoutModal}>Add Workout</button>
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box max-w-screen-xl relative">

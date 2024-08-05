@@ -17,9 +17,9 @@ function Public({ publicPostsData, handleDelete}: PublicPostsDataProps) {
              return (
                <React.Fragment key={data._id}>
                 <div className='flex flex-col gap-2'>
-                 <div className='w-full md:w-96 flex-shrink-0 border-solid border-2 p-4 border-stone-300 rounded-lg'>
+                 <div className='w-full md:w-96 flex-shrink-0 border-solid border-2 p-4 border-neutral-content rounded-lg'>
                    <div className="overflow-x-auto">
-                     <table className="table min-w-full md:min-w-0">
+                     <table className="table min-w-full md:min-w-0 text-base-content">
                        <thead>
                          <tr>
                            <th>Exercise</th>
@@ -42,7 +42,7 @@ function Public({ publicPostsData, handleDelete}: PublicPostsDataProps) {
                        </tbody>
                      </table>
                    </div>
-                   <p className='pl-4 pt-4 mt-4 border-t-2 border-stone-300'>
+                   <p className='pl-4 pt-4 mt-4 border-t-2 border-neutral-content'>
                      {data.description}
                    </p>
                  </div>

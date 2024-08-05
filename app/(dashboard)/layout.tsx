@@ -1,9 +1,10 @@
+"use client"
 import { PropsWithChildren } from 'react';
 import Link from 'next/link';
 import { UserButton} from '@clerk/nextjs'
-import {currentUser} from "@clerk/nextjs/server";
+import ThemeToggle from '@/components/ToggleBetweenThemes/ThemeToggle';
 
-async function layout({ children }: PropsWithChildren) {
+function layout({ children }: PropsWithChildren) {
 
   return (
     <div>
@@ -37,11 +38,12 @@ async function layout({ children }: PropsWithChildren) {
                 </ul>
             </div>
             <div className="navbar-end">
-                <UserButton appearance={{
+                {/* <UserButton appearance={{
                     elements:{
                         avatarBox:"h-[48px] w-[48px]"
                     }}}
-                afterSignOutUrl='/' />
+                afterSignOutUrl='/' /> */}
+                <ThemeToggle />
             </div>
         </div>
         {children}

@@ -20,7 +20,7 @@ const config: Config = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["nord", "dracula"],
+    themes: ["winter", "forest"],
   },
 };
 
