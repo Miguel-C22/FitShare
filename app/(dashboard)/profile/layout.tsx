@@ -27,8 +27,8 @@ async function layout({ children }: PropsWithChildren){
           userId={userName.userId}
         /> 
         <div className='flex flex-wrap px-8 gap-8 justify-center items-center font-bold text-lg'>
-          <button> <span className='bg-gray-900 text-white px-2 py-1 rounded-md'>200</span> <br></br> Following </button>
-          <button> <span className='bg-gray-900 text-white px-2 py-1 rounded-md'>100</span> <br></br> Followers </button>
+          <button> <span className='bg-neutral text-white px-2 py-1 rounded-md'>200</span> <br></br> Following </button>
+          <button> <span className='bg-neutral text-white px-2 py-1 rounded-md'>100</span> <br></br> Followers </button>
         </div>
       </div>
      

@@ -8,7 +8,7 @@ function PersonalRecords({userId, prBench, prDeadLift, prSquat}: PersonalRecords
   return (
     <div className='flex flex-wrap justify-center md:flex-row gap-8'>  
       <div className='flex items-center gap-4 shadow-xl p-8 rounded-xl'>
-        <div className='bg-gray-800 p-2 rounded-full'>
+        <div className='bg-primary p-2 rounded-full'>
           <LiaDumbbellSolid size={40} style={{ color: 'white' }}/>
         </div>
         <div>
@@ -18,7 +18,7 @@ function PersonalRecords({userId, prBench, prDeadLift, prSquat}: PersonalRecords
         </div>
       </div>
       <div className='flex items-center gap-4 shadow-xl p-8 rounded-xl'>
-        <div className='bg-gray-800 p-2 rounded-full'>
+        <div className='bg-primary p-2 rounded-full'>
           <LiaDumbbellSolid size={40} style={{ color: 'white' }}/>
         </div>
         <div>
@@ -28,7 +28,7 @@ function PersonalRecords({userId, prBench, prDeadLift, prSquat}: PersonalRecords
         </div>
       </div>
       <div className='flex items-center gap-4 shadow-xl p-8 rounded-xl'>
-        <div className='bg-gray-800 p-2 rounded-full'>
+        <div className='bg-primary p-2 rounded-full'>
           <LiaDumbbellSolid size={40} style={{ color: 'white' }}/>
         </div>
         <div>

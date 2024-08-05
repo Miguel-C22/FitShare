@@ -103,7 +103,7 @@ function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
   
     return (
       <div className='fixed bottom-5 right-5 z-10'>
-      <button className="btn btn-active" onClick={openAddWorkoutModal}>Add Workout</button>
+      <button className="btn btn-neutral rounded-lg" onClick={openAddWorkoutModal}>Add Workout</button>
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box max-w-screen-xl relative">
           <h3 className="font-bold text-lg mb-4">Workout Log</h3>
@@ -152,7 +152,7 @@ function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
                             }}
                             type="number"
                             placeholder="Sets"
-                            className="input input-bordered input-sm w-48 sm:w-42"
+                            className="input input-bordered input-sm w-48 sm:w-42 rounded-lg"
                             required
                             />
                         </td>
@@ -165,8 +165,8 @@ function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
                                 setExerciseRows(updatedRows);
                             }}
                             type="number"
-                            placeholder="Reps"
-                            className="input input-bordered input-sm w-48 sm:w-42"
+                            placeholder="Reps" 
+                            className="input input-bordered input-sm w-48 sm:w-42 rounded-lg"
                             required
                             />
                         </td>
@@ -180,7 +180,7 @@ function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
                             }}
                             type="number"
                             placeholder="Weight"
-                            className="input input-bordered input-sm w-48 sm:w-42"
+                            className="input input-bordered input-sm w-48 sm:w-42 rounded-lg"
                             required
                             />
                         </td>
@@ -188,7 +188,7 @@ function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
                         {exerciseRows.length > 1 && (
                             <button 
                             type="button"
-                            className="btn btn-outline btn-error btn-sm" 
+                            className="btn btn-outline btn-error btn-sm rounded-lg" 
                             onClick={() => removeExerciseRow(index)}
                             >
                             remove
@@ -203,13 +203,13 @@ function CreateWorkout({onWorkoutSubmit}: OnWorkoutSubmitProp) {
                 <textarea 
                 value={description}
                 onChange={(e) => (setDescription(e.target.value))}
-                className="textarea textarea-bordered w-full mb-24" 
+                className="textarea textarea-bordered w-full mb-24 rounded-lg" 
                 placeholder="Description">
                 </textarea>
                 {/*post button and add another exercise button*/}
                 <div className="modal-action mt-4 absolute bottom-0 left-4 sm:right-4">
-                    <button type="submit" className='btn btn-success btn-md'>Post</button>
-                    <button className="btn bg-stone-900 text-white btn-md" 
+                    <button type="submit" className='btn btn-success btn-md rounded-lg'>Post</button>
+                    <button className="btn bg-stone-900 text-white btn-md rounded-lg" 
                     onClick={(e) => {
                         e.preventDefault();
                         addExerciseRow();

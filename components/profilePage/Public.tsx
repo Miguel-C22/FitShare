@@ -16,7 +16,7 @@ function Public({ publicPostsData, handleDelete}: PublicPostsDataProps) {
             {publicPostsData.map(data => {
              return (
                <React.Fragment key={data._id}>
-                <div className='flex flex-col gap-2'>
+                <div className='flex flex-col gap-2 overflow-x-auto'>
                  <div className='w-full md:w-96 flex-shrink-0 border-solid border-2 p-4 border-neutral-content rounded-lg'>
                    <div className="overflow-x-auto">
                      <table className="table min-w-full md:min-w-0 text-base-content">
